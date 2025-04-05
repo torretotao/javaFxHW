@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.HelloController">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Загрузить файл" onAction="#handleLoadFile"/>
+            <ComboBox fx:id="yearComboBox" promptText="Выберите год" onAction="#updateChart"/>
+        </HBox>
+    </top>
+    <center>
+        <LineChart fx:id="salesChart" title="График продаж">
+            <xAxis>
+                <CategoryAxis label="Месяц"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Сумма прибыли"/>
+            </yAxis>
+        </LineChart>
+    </center>
+</BorderPane>
